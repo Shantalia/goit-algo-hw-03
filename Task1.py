@@ -15,7 +15,8 @@ def get_days_from_today(date:str): # формат РРРР-ММ-ДД
 
 while True:
     try: 
-        get_days_from_today(input("Введіть дату в форматі РРРР-ММ-ДД: "))
+        date = input("Введіть дату в форматі РРРР-ММ-ДД: ")
+        get_days_from_today(date)
         break
     except ValueError:
         print('Невірна або неіснуюча дата!')
