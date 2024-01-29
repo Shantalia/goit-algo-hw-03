@@ -16,7 +16,6 @@ def normalize_phone(phone_number):
         phone_number = ""
         phone_number = code + phone_number.join(clear_number)
     return print(f"Ваш номер телефону: {phone_number}")
-    
 while True:
     try:
         phone_number = input("Введіть номер телефону: ")
