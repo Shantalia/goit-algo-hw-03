@@ -13,7 +13,7 @@ def get_numbers_ticket(min, max, quantity):
             lottery_numbers = list(clear_lottery_list)
             lottery_numbers.sort()
             i+=1           
-    return print(f"Ваші лотерейні числа: {lottery_numbers}")
+    return f"Ваші лотерейні числа: {lottery_numbers}"
 
 while True:
     try:

@@ -15,11 +15,12 @@ def normalize_phone(phone_number):
             code = string
         phone_number = ""
         phone_number = code + phone_number.join(clear_number)
-    return print(f"Ваш номер телефону: {phone_number}")
+    return f"Ваш номер телефону: {phone_number}"
+
 while True:
     try:
         phone_number = input("Введіть номер телефону: ")
-        normalize_phone(phone_number)
+        print(normalize_phone(phone_number))
         break
     except ValueError:
         print("Невірний номер!")
