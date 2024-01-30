@@ -20,7 +20,7 @@ def normalize_phone(phone_number):
                     break
                 else:
                     print("Це не український номер!")
-                    exit()
+                    return ""
             else:
                 code = string
             phone_number = ""
@@ -30,7 +30,7 @@ def normalize_phone(phone_number):
         phone_number = code + phone_number.join(clear_number)
     else:
         print("Це не український номер!")
-        exit()
+        return ""
     return f"Ваш номер телефону: {phone_number}"
 
 while True:

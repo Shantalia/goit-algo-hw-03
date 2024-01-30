@@ -24,7 +24,7 @@ while True:
             print("Невірне значення!")
             continue
         else:
-            get_numbers_ticket(min, max, quantity)
+            print(get_numbers_ticket(min, max, quantity))
         break
     except ValueError:
-        print('Невірний тип даних!') 
+        print('Невірний тип даних!\n', []) 

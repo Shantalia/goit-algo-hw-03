@@ -1,7 +1,6 @@
 from datetime import datetime
 import re
 
-
 def get_days_from_today(date:str): # формат РРРР-ММ-ДД
     pattern = r'\d{4}\-\d{2}\-\d{2}$'
     if bool(re.match(pattern, date)):
@@ -10,14 +9,11 @@ def get_days_from_today(date:str): # формат РРРР-ММ-ДД
         difference = today - date
     else: 
         print("Невірний формат!")
-        get_days_from_today(input("Введіть дату в форматі РРРР-ММ-ДД: "))
+        get_days_from_today()
     return f"{int(difference.days)}" 
 
-while True:
-    try: 
-        date = input("Введіть дату в форматі РРРР-ММ-ДД: ")
-        print(get_days_from_today(date))
-        break
-    except ValueError:
-        print('Невірна або неіснуюча дата!')
-    continue 
+try: 
+    date = "2025-01-17"
+    print(get_days_from_today(date))
+except ValueError:
+    print('Невірна або неіснуюча дата!')
