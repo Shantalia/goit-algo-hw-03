@@ -19,7 +19,7 @@ def get_upcoming_birthdays(users):
                 elif day_of_week == 6:
                     congratulation_date = datetime(year = today.year, month = birth_day.month, day = birth_day.day+1)
                 congratulations.append({user["name"] : str(congratulation_date.date())})    
-    return f"Список привітань на цьому тижні:\n", congratulations                 
+    return f"Список привітань на цьому тижні:\n {congratulations}"                 
 
 users = [
     {"name": "John Doe", "birthday": "1985.02.03"},
