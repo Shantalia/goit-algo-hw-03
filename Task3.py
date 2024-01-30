@@ -16,7 +16,11 @@ def normalize_phone(phone_number):
         for i in code:
             string += i
             if phone_number.startswith(string):
-                break
+                if phone_number[:3] == code:
+                    break
+                else:
+                    print("Це не український номер!")
+                    exit()
             else:
                 code = string
             phone_number = ""
