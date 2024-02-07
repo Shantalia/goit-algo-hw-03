@@ -2,18 +2,10 @@ import random
 
 
 def get_numbers_ticket(min, max, quantity):
-    lottery_numbers = []
-    i = 0
-    while i < quantity:
-        lottery_numbers.append(random.randint(min,max))
-        clear_lottery_list = set(lottery_numbers)
-        if len(clear_lottery_list) != len(lottery_numbers):
-            lottery_numbers = list(clear_lottery_list)
-        else:
-            lottery_numbers = list(clear_lottery_list)
-            lottery_numbers.sort()
-            i+=1           
-    return f"Ваші лотерейні числа: {lottery_numbers}"
+    lottery_numbers = set()
+    while len(lottery_numbers) < quantity:
+        lottery_numbers.add(random.randint(min,max))
+    return sorted(lottery_numbers)
 
 while True:
     try:

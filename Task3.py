@@ -19,7 +19,7 @@ def normalize_phone(phone_number):
                 if phone_number[:3] == code:
                     break
                 else:
-                    print("Це не український номер!")
+                    Exception
                     return ""
             else:
                 code = string
@@ -29,9 +29,9 @@ def normalize_phone(phone_number):
         phone_number = ""
         phone_number = code + phone_number.join(clear_number)
     else:
-        print("Це не український номер!")
+        Exception
         return ""
-    return f"Ваш номер телефону: {phone_number}"
+    return phone_number
 
 while True:
     try:
